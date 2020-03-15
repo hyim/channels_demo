@@ -1,0 +1,33 @@
+{% extends "base_site.html" %}
+{% load static %}
+
+{% block title %}
+    Hello
+{% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <p>
+        <a class="btn btn-light" id="send-command-btn" href="#">Send</a>
+        <a class="btn btn-light" id="clear-btn" href="#">Clear</a>
+    </p>
+    <div class="row">
+         <div class="col-md-6">
+    <textarea id="command" rows="10" style="width:100%" class="form-control">{ "command":"start" }</textarea>
+        </div>
+        <div class="col-md-6">
+            <textarea id="output" rows="10" style="width: 100%" class="form-control"></textarea>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <textarea id="observe-normal-output" rows="10" style="width:100%" class="form-control"></textarea>
+        </div>
+        <div class="col-md-6">
+            <textarea id="observe-error-output" rows="10" style="width:100%" class="form-control"></textarea>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
